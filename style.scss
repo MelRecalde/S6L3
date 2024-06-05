@@ -38,11 +38,123 @@ header {
 
 #hero {
     background-color: $body-color;
-    font-family: $sans-serif;
+    font-family: $serif;
+
     & h1 {
         margin: $size-0;
         color: $color-two;
-        padding-left: $size-3;
+        padding-left: $size-5;
         font-size: 70px;
+    }
+
+    .container {
+        display: $d-flex;
+        justify-content: space-around;
+        align-items: center;
+
+        & p {
+            color: $color-three;
+            font-size: $size-4;
+            margin-inline: $size-3;
+            margin-block: $size-0;
+            padding-left: $size-5;
+        }
+
+        .btn-container {
+            margin-top: $size-2;
+            margin-inline-start: $size-3;
+            display: $d-flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: $size-1;
+            font-family: $sans-serif;
+            padding: 2px;
+
+            & .btn1 {
+                border: none;
+                font-size: $size-3;
+                padding: $size-2;
+                background-color: $color-one;
+                border-radius: 20px;
+            }
+
+            & .btn2 {
+                border: none;
+                font-size: $size-3;
+                padding: $size-2;
+                background-color: $color-two;
+                border-radius: 20px;
+            }
+
+            & .btn3 {
+                border: none;
+                font-size: $size-3;
+                padding: $size-2;
+                background-color: $color-three;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(0%, -100%)
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#hero:hover {
+
+    & h1,
+    p,
+    .btn1 {
+        animation-name: fadeIn;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    & img,.btn2 {
+        animation-name: fadeIn;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+    & .btn3 {
+        animation-name: fadeIn;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.left-side {
+    display: $d-flex;
+    flex-direction: column;
+    gap: $gapX;
+}
+
+.img-container {
+    display: $d-flex;
+    justify-content: center;
+    gap: $gapX;
+    margin: $size-3;
+
+    & .img {
+        box-shadow: 1 0 10px 5px $color-one;
+
+        & img {
+            object-fit: cover;
+            height: 200px;
+            border: 3px solid $color-three;
+            border-radius: 20px;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
     }
 }
