@@ -1,0 +1,48 @@
+@import "./partial/spacing";
+@import "./partial/reset";
+@import "./partial/colors";
+@import "./partial/fonts";
+@import "./partial/mixins";
+@import "./partial/buttons";
+
+header {
+    margin: $size-0;
+
+    nav {
+        @extend header;
+        background-color: $color-two;
+        font-family: $sans-serif;
+        padding: $size-3;
+        height: 70px;
+
+        ul {
+            @extend header;
+            display: $d-flex;
+            list-style: none;
+            justify-content: flex-start;
+            align-items: center;
+            gap: $gapX;
+
+            & a {
+                color: $body-color;
+                text-decoration: none;
+            }
+
+            & .menu-list {
+                @extend ul;
+                gap: $gapX;
+            }
+        }
+    }
+}
+
+#hero {
+    background-color: $body-color;
+    font-family: $sans-serif;
+    & h1 {
+        margin: $size-0;
+        color: $color-two;
+        padding-left: $size-3;
+        font-size: 70px;
+    }
+}
