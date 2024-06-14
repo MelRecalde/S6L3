@@ -76,6 +76,7 @@ header {
                 padding: $size-2;
                 background-color: $color-one;
                 border-radius: 20px;
+                cursor: pointer;
             }
 
             & .btn2 {
@@ -84,6 +85,7 @@ header {
                 padding: $size-2;
                 background-color: $color-two;
                 border-radius: 20px;
+                cursor: pointer;
             }
 
             & .btn3 {
@@ -92,6 +94,7 @@ header {
                 padding: $size-2;
                 background-color: $color-three;
                 border-radius: 20px;
+                cursor: pointer;
             }
         }
     }
@@ -114,18 +117,18 @@ header {
     p,
     .btn1 {
         animation-name: fadeIn;
-        animation-duration: 2s;
+        animation-duration: 0.5s;
         animation-fill-mode: forwards;
     }
 
     & img,.btn2 {
         animation-name: fadeIn;
-        animation-duration: 3s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
     }
     & .btn3 {
         animation-name: fadeIn;
-        animation-duration: 4s;
+        animation-duration: 1.5s;
         animation-fill-mode: forwards;
     }
 }
@@ -143,17 +146,20 @@ header {
     margin: $size-3;
 
     & .img {
-        box-shadow: 1 0 10px 5px $color-one;
+
 
         & img {
             object-fit: cover;
             height: 200px;
             border: 3px solid $color-three;
             border-radius: 20px;
+            box-shadow: 0 0 5px 1px $color-three;
 
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1.2);
                 cursor: pointer;
+                box-shadow: 0 0 10px 5px $color-one;
+                border: none;
             }
         }
     }
